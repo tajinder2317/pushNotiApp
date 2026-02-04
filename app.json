@@ -2,6 +2,7 @@
   "expo": {
     "name": "pushNotiApp",
     "slug": "pushNotiApp",
+    "owner": "tajinder2317",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +15,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.Tajinder.pushNotiApp"
+      "bundleIdentifier": "com.Tajinder.pushNotiApp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -35,9 +39,15 @@
       [
         "expo-notifications",
         {
-          "icon": "./assets/icon.png"
+          "icon": "./assets/icon.png",
+          "enableBackgroundNotifications": true
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0c20552b-1f36-4463-bb7d-9f549710f7fa"
+      }
+    }
   }
 }
